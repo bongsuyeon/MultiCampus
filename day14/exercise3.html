@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise3-봉수연</title>
+</head>
+<body>
+<script>
+function calc() {
+    var sum = 0;
+    var message = "숫자만 전달하세요";
+    for (var i =0; i<arguments.length; i++){
+        if(typeof(arguments[i]) != 'number')
+        {
+            if(isNaN(Number(arguments[i]))){
+                return message;
+            }
+            else{
+                arguments[i]*=1;
+            }
+        }
+        sum += arguments[i];
+    }
+    return sum;
+}
+
+document.write("<h3> calc() 값 : "+ calc() +"</h3>");
+document.write("<h3> calc(10, 20, '30') 값 : "+ calc(10, 20, '30') +"</h3>");
+document.write("<h3> calc(10, '가나다', 20) 값 : "+ calc(10, '가나다', 20) +"</h3>");
+document.write("<h3> calc(1,2,3,4,5) 값 : "+ calc(1,2,3,4,5) +"</h3>");
+
+</script>
+</body>
+</html>

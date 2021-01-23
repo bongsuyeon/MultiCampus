@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        button:nth-of-type(1) {
+	color : red;
+	font-size : 1.5em;
+        }
+        button:nth-of-type(2) {
+	color : blue;
+	font-size : 1.5em;
+        }
+        button:nth-of-type(3) {
+	color : green;
+	font-size : 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="Time('red')">빨강색</button>
+    <button onclick="Time('blue')">파랑색</button>
+    <button onclick="Time('green')">녹&nbsp;&nbsp;색</button>
+    <hr>
+    <h2></h2>
+<script>
+var target = document.getElementsByTagName("h2")[0];
+function Time(col) {
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth()+1;
+    var day = d.getDay();
+
+    //toLocaleString()은 Date 객체를 문자열로 변환한다.[지역시간대 표시]
+	target.innerHTML = "<span style=\"color:"+ col +"\">"+
+	"오늘은 "+year+"년 "+month+"월 "+day+"일 입니다.</span>";
+}
+    </script>
+</body>
+</html>
+

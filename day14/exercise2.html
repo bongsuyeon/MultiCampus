@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise2-봉수연</title>
+</head>
+<body>
+<script>
+var num = Math.floor(Math.random() * 6);
+
+var f = sum(num)
+if( f != undefined) {
+    document.write("<h2>호출 결과값 :"+f+"</h2>");
+}
+else{
+ document.write("<h3>결과값이 없어요!!"+"</h3>");
+}
+
+function sum(num) {
+    var sum=0;
+    for (var i=0; i<=num; i++)
+        sum+=i;
+    if (sum!=0){
+        return sum;
+    }
+}
+
+</script>
+</body>
+</html>

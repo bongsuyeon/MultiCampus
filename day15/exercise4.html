@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var num = Math.floor(Math.random() * 3 + 1);
+document.write(num)
+
+if (num == 1){
+    submit("다음");
+}
+if (num == 2){
+  submit("네이버");
+}
+if (num == 3){
+    submit("구글");
+}
+
+function submit(str){
+    result = window.confirm(str+"페이지로 이동");
+     if(result == false){
+        location.href = "first.html";
+    }
+    if(result == true && str == "다음"){
+        location.href = "https://www.daum.net/";
+    }
+    if(result == true && str == "네이버"){
+        location.href = "https://www.naver.com/";
+    }
+    if(result == true && str == "구글"){
+    	location.href = "https://www.google.co.kr/";
+    }
+}
+
+</script>
+</body>
+</html>

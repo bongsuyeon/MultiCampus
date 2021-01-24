@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 학습</title>
+</head>
+<style>
+    header{
+    	background-image : linear-gradient(to right,yellow,pink,violet);
+		height : 130px;
+		text-align: center;
+		padding: 10px 0px;
+	}
+	h1{
+    	color: #99004C;
+	    text-shadow: 2px 1px white;
+    }
+    a{
+        text-decoration:none;
+    }
+    a:hover { /*마우스가 a태그 위에 올라가면 두꺼워짐*/
+        font-weight: bold;
+    }
+    article{
+        margin: 20px 80px;
+        padding: 10px;
+        border : 4px solid pink;
+        border-radius : 20px;
+    }
+    aside{
+        margin: 20px 80px;
+        padding: 10px;
+    }
+    .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height:0;
+    overflow:hidden;
+    }
+    .video iframe,.video object,.video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+    }
+    #myIntro, #myTownText{
+        color: #FF007F;
+    }
+    #myBook{
+        color:#2F9D27;
+        text-shadow: 1px 1px black;
+    }
+    #myTown{
+        color: #6600FF;
+    }
+    .h3Text{
+        text-align: center;
+    }
+    table{
+        width: 30%;
+        border: 3px green;
+        border-collapse:collapse;
+    }
+    th{
+        background-color: green;
+        padding: 5px auto;
+        font-weight: bold;
+        text-align: center;
+    }
+    img{
+        width: auto; height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0px auto;
+    }
+    footer{
+        margin: 20px 80px;
+        padding: 10px;
+    	background-color : black;
+    	color: white;
+		text-align: center;
+		font-style: italic;
+	}
+
+
+</style>
+<body>
+<header>
+    <h1>HTML 학습5</h1>
+    <nav>
+        <a href="https://www.w3.org/">W3C</a>
+        <a href="http://www.w3schools.com/">W3C Schools</a>
+        <a href="https://jquery.com/">jQuery</a>
+    </nav>
+</header>
+<section>
+    <article class="intro">
+        <h2 id="myIntro">나의 소개</h2>
+        <ul>
+            <li>이름: 봉수연</li>
+            <li>별명: 봉봉</li>
+            <li>관심기술: HTML5</li>
+            <li>취미 : 개발하기</li>
+        </ul>
+    </article>
+    <article class="book">
+        <h3 id="myBook">올해 재미있게 읽은 책</h3>
+        <table border="3">
+            <tr><th>제목</th><th>장르</th></tr>
+            <tr><td>파이썬 정복</td><td>파이썬</td></tr>
+            <tr><td>맛있는 mongodb</td><td>nosql</td></tr>
+        </table>
+    </article>
+    <article class="town">
+        <h3 id="myTown">자랑하고싶은 <span id="myTownText">우리동네</span>의 아름다운 곳</h3>
+        <figure>
+            <p>세빛섬은 서울의 중심인 한강에 색다른 수변 문화를 즐길 수 있는 랜드마크로 조성된 복합 문화 공간입니다. 세계 최초로 물 위에 떠 있을 수 있는 부체 위에 건물을 짓는 플로팅 형태의 건축물입니다. 세빛섬은 한강을 아름답게 밝혀줄 세 개의 빛나는 섬과 다양한 영상 및 콘텐츠가 상영되는 예빛으로 이루어져 있습니다.</p>
+            <img src="https://www.somesevit.co.kr/images/main/img_mainposter_m.png">
+        </figure>
+        <h3 class="h3Text">서울의 한강에 있는 새빛섬</h3>
+    </article>
+</section>
+<aside>
+    <div class="video">
+    <iframe  src="https://www.youtube.com/embed/h_bTGW-1dwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+    </div>
+</aside>
+<footer>
+    <div>이 문서는 봉수연에 의해 HTML5와 css3 기술을 사용하여 2021년 1월에 작성하였습니다(ver 1.0)</div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

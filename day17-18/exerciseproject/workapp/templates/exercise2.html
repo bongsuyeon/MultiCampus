@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .writer{
+        color: green;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        {% if name %}
+            <h2><span class="writer">{{ name }}</span>님이 남긴 글 입니다.</h2>
+            <hr>
+            <h3>{{ opinion }}</h3>
+        {% else %}
+            <h1>의견을 남겨주세요</h1>
+            <hr>
+            <form method="POST" action="/workapp/exercise2/">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="작성자의 이름을 입력해주세요" required></br>
+                <textarea name="opinion" rows="10" cols="33" placeholder="자신의 의견을 간단히 작성해주세요" required></textarea></br>
+                <input type="submit" value="제출">
+                <input type="button" value="재작성" onclick='rewrite()'>
+            </form>
+        {% endif %}
+    </div>
+    <script>
+        function rewrite(){
+            var eraseName = document.getElementsByName('name')
+            var eraseText = document.getElementsByName('opinion');
+            for(var i=0; i<eraseName.length; i++){
+        	    eraseName[i].value = '';
+        	}
+            for(var i=0; i<eraseText.length; i++){
+        	    eraseText[i].value = '';
+        	}
+            //alert("지워져따아");
+        }
+    </script>
+</body>
+</html>
